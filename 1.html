@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Greeting</title>
+</head>
+
+<body>
+    <h1>Please input your name:</h1>
+
+    <div>
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" name="firstname">
+        <br>
+        <label for="lastname">Last name:</label>
+        <input id="lastname" type="text" name="lastname">
+        <br>
+        <button onclick="greet()">Submit</button>
+    </div>
+
+    <div>
+        <h2 id="greeting"></h2>
+    </div>
+
+    <script> 
+        var firstName = '';
+        var lastName = '';
+
+        function greet() {
+            firstName = document.getElementById("firstname").value;
+            lastName = document.getElementById("lastname").value;
+            document.getElementById('greeting').innerHTML = 'Hello ' + firstName + ' ' + lastName + ' !';
+        }
+    </script>
+    
+</body>
+
+</html>
